@@ -1,20 +1,12 @@
 import React from "react";
-import TodoListContainer from "./components/TodoListContainer";
-import styled from "styled-components";
-import AddForm from "./components/AddForm";
+import './App.css';
+import Router from "./shared/Router";  // Router import
 
-const App = () => {
+function App() {
   return (
-    <StContainer>
-      <AddForm />
-      <TodoListContainer />
-    </StContainer>
+    // 페이지 구성을 Router에서 관리(왜? 가장 상위 컴포넌트니까)
+    <Router />
   );
-};
+}
 
 export default App;
-
-const StContainer = styled.section`
-  max-width: 1440px;
-  margin: 0 auto;
-`;
